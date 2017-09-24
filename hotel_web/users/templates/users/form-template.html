@@ -1,0 +1,19 @@
+{% for field in form %}
+	<!--<div class="form-group">-->
+		<!--&lt;!&ndash;<div class="col-sm-offset-2 col-sm-10">&ndash;&gt;-->
+			<!--<span class="text-danger small">{{ field.errors }}</span>-->
+			<!---->
+		<!--&lt;!&ndash;</div>&ndash;&gt;-->
+		<!--<label>{{ field.label}}<span class="req">*</span></label>-->
+		<!--<div>{{ field }}</div>-->
+	<!--</div>-->
+
+    <!--<div class="top-row">-->
+            <div class="field-wrap">
+              <label class="">
+                {{field.label}}<span class="req">*</span>
+              </label>
+                {{field}}
+            </div>
+    <!--</div>-->
+{% endfor %}

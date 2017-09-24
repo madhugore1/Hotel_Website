@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Resort Inn</title>
+    <link href='{% static  "css/bootstrap.css" %}' rel="stylesheet" type="text/css" media="all"/>
+    <link href='{% static  "css/font-awesome.css" %}' rel="stylesheet">
+    <link rel="stylesheet" href='{% static  "css/chocolat.css" %}' type="text/css" media="screen">
+    <link href='{% static  "css/easy-responsive-tabs.css" %}' rel='stylesheet' type='text/css'/>
+    <link rel="stylesheet" href='{% static  "css/flexslider.css" %}' type="text/css" media="screen" property=""/>
+    <link rel="stylesheet" href='{% static  "css/jquery-ui.css" %}'/>
+    <link href='{% static  "css/style.css" %}' rel="stylesheet" type="text/css" media="all"/>
+    <script type="text/javascript" src='{% static  "js/modernizr-2.6.2.min.js" %}'></script>
+
+
+    <!-- <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"> -->
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Federo" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <!--//fonts-->
+
+
+    <link rel="stylesheet" href='{% static  "login_form/css/style.css" %}'>
+
+
+</head>
+
+<body>
+<div class="banner-top">
+    <div class="social-bnr-agileits">
+        <ul class="social-icons3">
+            <li><a href="#" class="fa fa-facebook icon-border facebook"> </a></li>
+            <li><a href="#" class="fa fa-twitter icon-border twitter"> </a></li>
+            <li><a href="#" class="fa fa-google-plus icon-border googleplus"> </a></li>
+        </ul>
+    </div>
+    <div class="contact-bnr-w3-agile">
+        <ul>
+            <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:admin@resortinn.com">admin@resortinn.com</a>
+            </li>
+            <li><i class="fa fa-phone" aria-hidden="true"></i>+91 9999155233</li>
+
+        </ul>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="w3_navigation">
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="navbar-header navbar-left">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h1><a class="navbar-brand" href="/index">Resort <span>Inn</span>
+                    <p class="logo_w3l_agile_caption">Your Dreamy Resort</p></a></h1>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+                <nav class="menu menu--iris">
+                    <ul class="nav navbar-nav menu__list">
+                        <li class="menu__item"><a href="/index" class="menu__link">Home</a></li>
+                        <li class="menu__item"><a href="/index#about" class="menu__link scroll">About</a></li>
+                        <li class="menu__item"><a href="/index#team" class="menu__link scroll">Team</a></li>
+                        <li class="menu__item"><a href="/index#gallery" class="menu__link scroll">Gallery</a></li>
+                        <li class="menu__item"><a href="/index#rooms" class="menu__link scroll">Rooms</a></li>
+                        <li class="menu__item"><a href="/index#contact" class="menu__link scroll">Contact Us</a></li>
+                        <li class="menu__item"><a href="/users/login" class="menu__link">Log In</a></li>
+                        <li class="menu__item"><a href="/room/check_availability" class="menu__link">Available</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
+
+    </div>
+</div>
+
+<div class="form">
+    <div id="Login">
+        <h1>Welcome Back!!</h1>
+        <div class="container-fluid">
+
+            <form class="form-horizontal" action="" method="post">
+                {% csrf_token %}
+                {% include 'users/form-template.html' %}
+
+                <p class="forgot"><a href="#">Forgot Password?</a></p>
+                <button type="submit" class="button button-block">Log In</button>
+                <p class="register"><a href="/users/register">Not Registered?</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+<script src='{% static  "login_form/js/index.js" %}'></script>
+
+</body>
+</html>
