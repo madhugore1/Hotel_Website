@@ -1,10 +1,11 @@
-from django.template import loader
+from django.template import loader, RequestContext
 from django.http import HttpResponse, HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
 from django.contrib.auth import authenticate, login, logout
 from django.views import generic
 from django.views.generic import View
 from .forms import *
+
 
 
 def register(request):
@@ -22,6 +23,10 @@ def logout_view(request):
     return redirect('/index')
     #return HttpResponseRedirect(request.META.get("HTTP_REFERER"))
 
+def review_booking(request):
+    queryset = Reservation.objects.filter(user_id=request.user)
+    table = ReviewBooking(queryset)
+    return render(request, 'users/review.html', {'table': table})
 
 class LoginFormView(View):
     form_class = LoginForm
