@@ -74,7 +74,7 @@
                                 <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a href="/index/">Manage Bookings</a></li>
+                                <li><a href="/index/">Review Bookings</a></li>
                                 <!--<li><a href="/index">Edit</a></li>-->
                                 <li role="separator" class="divider"></li>
                                 <li><a href="/users/logout">Logout</a></li>
@@ -82,11 +82,9 @@
                             </ul>
                             <!--</div>-->
                         </li>
+                        <li class="menu__item"><a href="/room/check_availability" class="menu__link">Book</a></li>
                         {% else %}
                         <li class="menu__item"><a href="/users/login" class="menu__link">Log In</a></li>
-                        {% endif %}
-                        {% if user.is_authenticated %}
-                        <li class="menu__item"><a href="/room/check_availability" class="menu__link">Available</a></li>
                         {% endif %}
                     </ul>
                 </nav>
@@ -179,40 +177,6 @@
         </div>
     </div>
 </div>
-<!-- //Modal1 -->
-<!--<div id="availability-agileits">-->
-<!--<div class="col-md-3 book-form-left-w3layouts">-->
-<!--<h2>CHECK AVAILABILITY</h2>-->
-<!--</div>-->
-<!--<div class="col-md-9 book-form">-->
-<!--<form action="" method="post">-->
-<!--{% csrf_token %}-->
-<!--<div class="fields-w3ls form-left-agileits-w3layouts ">-->
-<!--<p>Room Type</p>-->
-<!--<select class="form-control" name = "description" >-->
-<!--<option>Select a Room</option>-->
-<!--<option>Luxury Room</option>-->
-<!--<option>Deluxe Room</option>-->
-<!--<option>Single Room</option>-->
-<!--<option>Guest House</option>-->
-<!--</select>-->
-<!--</div>-->
-<!--<div class="fields-w3ls form-date-w3-agileits">-->
-<!--<p>Arrival Date</p>-->
-<!--<input  id="datepicker1" name="check_in" type="text" value="Select Date" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">-->
-<!--</div>-->
-<!--<div class="fields-w3ls form-date-w3-agileits">-->
-<!--<p>Departure Date</p>-->
-<!--<input  id="datepicker2" name="check_out" type="text" value="Select Date" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">-->
-<!--</div>-->
-
-<!--<div class="form-left-agileits-submit">-->
-<!--<input type="submit" value="Check Availability">-->
-<!--</div>-->
-<!--</form>-->
-<!--</div>-->
-<!--<div class="clearfix"> </div>-->
-<!--</div>-->
 <!-- banner-bottom -->
 <div class="banner-bottom">
     <div class="container">
@@ -527,7 +491,6 @@
                         </div>
                         <div class="price-selet">
                             <h3><span>₹</span>35,000</h3><br><br>
-                            <a href="#availability-agileits" class="scroll">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -550,7 +513,6 @@
                         </div>
                         <div class="price-selet">
                             <h3><span>₹</span>20,000</h3><br><br>
-                            <a href="#availability-agileits" class="scroll">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -573,7 +535,6 @@
                         </div>
                         <div class="price-selet">
                             <h3><span>₹</span>18,000</h3><br><br>
-                            <a href="#availability-agileits" class="scroll">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -596,7 +557,6 @@
                         </div>
                         <div class="price-selet">
                             <h3><span>₹</span>10,000</h3><br><br>
-                            <a href="#availability-agileits" class="scroll">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -659,7 +619,6 @@
                     <li><a href="#" class="fa fa-google-plus icon-border googleplus"> </a></li>
                 </ul>
             </div>
-            <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3074.7905052320443!2d-77.84987248482734!3d39.586871613613056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c9f6a80ccf0661%3A0x7210426c67abc40!2sVirginia+Welcome+Center%2FSafety+Rest+Area!5e0!3m2!1sen!2sin!4v1485760915662" ></iframe> -->
         </div>
         <div class="clearfix"></div>
     </div>

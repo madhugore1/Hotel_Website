@@ -65,7 +65,6 @@ class CheckFormView(View):
                 template = loader.get_template('booking/room_not_available.html')
                 return HttpResponse(template.render({},request))
 
-
             else:
                 available_room=Room.objects.get(room_no=rooms[0].room_no)
                 available_room.room_status=False
@@ -75,7 +74,6 @@ class CheckFormView(View):
                 template = loader.get_template('booking/room_booked.html')
                 context = {'r_room': r_room, }
                 return HttpResponse(template.render(context, request))
-
 
         return render(request, self.template_name, {'form': form})
 

@@ -19,7 +19,8 @@ def log_in(request):
 
 def logout_view(request):
     logout(request)
-    return HttpResponseRedirect(request.META.get("HTTP_REFERER"))
+    return redirect('/index')
+    #return HttpResponseRedirect(request.META.get("HTTP_REFERER"))
 
 
 class LoginFormView(View):
